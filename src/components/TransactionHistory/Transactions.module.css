@@ -1,0 +1,26 @@
+.transaction_istory {
+  margin: 60px auto;
+  width: 500px;
+  color: cornflowerblue;
+  text-align: center;
+}
+
+.column_names {
+  font-size: 30px;
+  font-weight: 600;
+  height: 50px;
+}
+
+tbody {
+  font-size: 18px;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eaeef3;
+}
+tr:nth-of-type(odd) {
+  background-color: white;
+}
+td {
+  height: 50px;
+}
