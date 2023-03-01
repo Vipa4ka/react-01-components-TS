@@ -1,7 +1,18 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
+import React from "react";
 import styles from "./Statistics.module.css";
 
-const Statistics = ({ title, stats }) => {
+type Options = {
+  label: string;
+  id: string;
+  percentage: number;
+};
+interface Stat {
+  stats: Options[];
+  title: string;
+}
+
+const Statistics = ({ title, stats }: Stat) => {
   return (
     <section className={styles.statistics}>
       {title && <h2 className={styles.title}>{title}</h2>}
@@ -33,15 +44,15 @@ function randomColor() {
   );
 }
 
-Statistics.propTypes = {
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-      percentage: PropTypes.number.isRequired,
-    })
-  ).isRequired,
-  title: PropTypes.string,
-};
+// Statistics.propTypes = {
+//   stats: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.string.isRequired,
+//       label: PropTypes.string.isRequired,
+//       percentage: PropTypes.number.isRequired,
+//     })
+//   ).isRequired,
+//   title: PropTypes.string,
+// };
 
 export default Statistics;
